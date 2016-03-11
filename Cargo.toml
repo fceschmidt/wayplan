@@ -1,0 +1,10 @@
+[package]
+name = "wayplan"
+version = "0.1.0"
+authors = ["Fabian Schmidt <fschmidt95@googlemail.com>"]
+
+[dependencies]
+rustc-serialize = "0.3"
+
+[dependencies.rest_client]
+git = "https://github.com/fceschmidt/rest_client"

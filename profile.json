@@ -1,0 +1,19 @@
+[
+  {
+    "description": "Hamburg-Berlin Flixbus",
+    "origin": {
+      "description": "Hamburg",
+      "internal": "Hamburg Hbf (S-Bahn)"
+    },
+    "destination": {
+      "description": "Berlin",
+      "internal": "Berlin Hauptbahnhof, Hauptbahnhof, Europaplatz 1, 10557 Berlin"
+    },
+    "via": {
+      "description": "",
+      "internal": ""
+    },
+    "usual_internal_duration": 10322,
+    "usual_timetable_duration": 11400
+  }
+]
