@@ -24,6 +24,9 @@ fn get_duration( origin: &str, destination: &str, waypoints: &str ) -> i64 {
         &[  ("origin", origin), 
             ("destination", destination), 
             ("waypoints", waypoints),
+            ("departure_time", "now"),
+            ("traffic_model", "best_guess"),
+            ("mode", "driving"),
             ("key", "" ) ] ).unwrap();
 
     // Travel down the json tree, retrieve the array saved in
@@ -37,7 +40,7 @@ fn get_duration( origin: &str, destination: &str, waypoints: &str ) -> i64 {
     for leg in leg_array {
         // Travel even further down the json tree to get the duration of the leg
         let leg_object = leg.as_object().unwrap();
-        let duration = leg_object.get( "duration" ).unwrap();
+        let duration = leg_object.get( "duration_in_traffic" ).unwrap();
         let value = duration.as_object().unwrap().get( "value" ).unwrap();
 
         // Add it to the accumulator
