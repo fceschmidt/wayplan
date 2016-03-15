@@ -59,7 +59,7 @@ fn get_minute_string( seconds: i64 ) -> String {
     // Format depends on sign of seconds
     match seconds < 0 {
         false       => result = format!( "{}:{:02}", minutes, seconds ),
-        _           => result = format!( "-{}:{}", minutes, seconds.abs() ), 
+        _           => result = format!( "-{}:{:02}", minutes.abs(), seconds.abs() ), 
     }
 
     return result;
