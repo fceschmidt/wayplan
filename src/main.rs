@@ -65,6 +65,13 @@ fn get_minute_string( seconds: i64 ) -> String {
     return result;
 }
 
+/// Basic test for the get_minute_string function
+#[test]
+fn prop_get_minute_string_examples() {
+    assert_eq!( get_minute_string( 630 ), "10:30".to_string() );
+    assert_eq!( get_minute_string( -580 ), "-9:40".to_string() );
+}
+
 /// Stores information about a waypoint used to describe legs
 #[derive( RustcDecodable, RustcEncodable )]
 struct Waypoint {
