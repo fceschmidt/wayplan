@@ -1,4 +1,7 @@
 # wayplan
+
+[![Build Status](https://travis-ci.org/fceschmidt/wayplan.svg?branch=master)](https://travis-ci.org/fceschmidt/wayplan)
+
 A program that can be used to calculate expected times on car routes with the Google Maps Directions API.
 
 # Getting started
